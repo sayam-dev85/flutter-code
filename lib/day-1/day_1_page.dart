@@ -12,14 +12,40 @@ class Day1Page extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
 
-      body: const Center(
-        child: Text(
-          'Hello Flutter',
-          style: TextStyle(
-            fontSize: 25,
-            color: Colors.blue,
-            fontWeight: FontWeight.bold,
-          ),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'Hello Flutter Day-1',
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 20),
+            // Rich Text
+            RichText(
+              text: TextSpan(
+                text: 'This is Rich Text ',
+                style: TextStyle(color: Colors.black, fontSize: 22),
+                children: <TextSpan>[
+                  TextSpan(
+                    text: 'Flutter',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' Leaner',
+                    style: TextStyle(color: Colors.green),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
